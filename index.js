@@ -35,6 +35,10 @@ app.use(express.json());
 app.use(cors());
 app.use("/images", express.static("images"));
 
+app.use("/hello", (req, res) =>{
+  return res.json({success: true, message: "Hello Md Aftab"});
+})
+   
 app.use(
   compression({
     level: 6,
